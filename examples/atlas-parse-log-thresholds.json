@@ -1,0 +1,17 @@
+{
+  "repo": "atlas-parse-log-scope",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 176,
+    "watch": 100
+  },
+  "terms": [
+    "token drift",
+    "grammar width",
+    "label quality",
+    "error locality"
+  ]
+}
