@@ -1,0 +1,73 @@
+{
+  "repo": "atlas-parse-log-scope",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for log incremental indexing, using append-only fixtures and checkpoint recovery checks.",
+  "review_model": {
+    "terms": [
+      "token drift",
+      "grammar width",
+      "label quality",
+      "error locality"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "token drift",
+      "signal": 46,
+      "slack": 36,
+      "drag": 30,
+      "confidence": 82,
+      "score": 120,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "grammar width",
+      "signal": 69,
+      "slack": 38,
+      "drag": 32,
+      "confidence": 66,
+      "score": 146,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "label quality",
+      "signal": 49,
+      "slack": 27,
+      "drag": 13,
+      "confidence": 50,
+      "score": 136,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "error locality",
+      "signal": 54,
+      "slack": 27,
+      "drag": 30,
+      "confidence": 71,
+      "score": 116,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "token drift",
+      "signal": 83,
+      "slack": 29,
+      "drag": 12,
+      "confidence": 89,
+      "score": 248,
+      "lane": "ship"
+    }
+  ]
+}
